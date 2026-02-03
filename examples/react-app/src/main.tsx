@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter } from 'react-router-dom';
-import { ScalekitAuthProvider } from '@scalekit/react-sdk';
+import { ScalekitAuthProvider } from '@scalekit-sdk/react';
 import App from './App';
 
 // Scalekit configuration
