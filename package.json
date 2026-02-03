@@ -59,6 +59,9 @@
     "sso",
     "pkce"
   ],
+  "engines": {
+    "node": ">=18"
+  },
   "author": "Scalekit",
   "license": "MIT",
   "repository": {
