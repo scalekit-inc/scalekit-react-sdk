@@ -1,5 +1,5 @@
 {
-  "name": "@scalekit/react-sdk",
+  "name": "@scalekit-sdk/react",
   "version": "0.1.0",
   "description": "React SDK for Scalekit OIDC authentication",
   "type": "module",

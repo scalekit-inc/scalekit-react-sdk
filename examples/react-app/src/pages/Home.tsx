@@ -1,4 +1,4 @@
-import { useScalekitAuth } from '@scalekit/react-sdk';
+import { useScalekitAuth } from '@scalekit-sdk/react';
 import { useNavigate } from 'react-router-dom';
 
 function Home() {

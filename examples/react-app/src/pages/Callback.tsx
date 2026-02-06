@@ -1,5 +1,5 @@
 import { useNavigate } from 'react-router-dom';
-import { ScalekitCallback } from '@scalekit/react-sdk';
+import { ScalekitCallback } from '@scalekit-sdk/react';
 
 function Callback() {
   const navigate = useNavigate();

@@ -1,4 +1,4 @@
-import { useScalekitAuth, useAccessToken } from '@scalekit/react-sdk';
+import { useScalekitAuth, useAccessToken } from '@scalekit-sdk/react';
 import { useNavigate } from 'react-router-dom';
 
 function Dashboard() {
