@@ -4,12 +4,12 @@ import { BrowserRouter } from 'react-router-dom';
 import { ScalekitAuthProvider } from '@scalekit-sdk/react';
 import App from './App';
 
-// Scalekit configuration
+// Scalekit configuration from environment variables
 const scalekitConfig = {
-  environmentUrl: 'https://scalekitdevrel-aflrypwzaabce.scalekit.cloud',
-  clientId: 'prd_skc_96576974507475491',
-  redirectUri: 'http://localhost:5173/callback',
-  postLogoutRedirectUri: 'http://localhost:5173',
+  environmentUrl: import.meta.env.VITE_SCALEKIT_ENVIRONMENT_URL,
+  clientId: import.meta.env.VITE_SCALEKIT_CLIENT_ID,
+  redirectUri: import.meta.env.VITE_SCALEKIT_REDIRECT_URI,
+  postLogoutRedirectUri: import.meta.env.VITE_SCALEKIT_POST_LOGOUT_REDIRECT_URI,
   scopes: 'openid profile email offline_access',
 };
 
