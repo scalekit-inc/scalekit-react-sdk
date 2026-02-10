@@ -1,4 +1,4 @@
-# @scalekit/react-sdk
+# @scalekit-sdk/react
 
 React SDK for Scalekit OIDC authentication. This SDK wraps `oidc-client-ts` to provide seamless OIDC/OAuth 2.0 authentication with Scalekit.
 
@@ -14,11 +14,11 @@ React SDK for Scalekit OIDC authentication. This SDK wraps `oidc-client-ts` to p
 ## Installation
 
 ```bash
-npm install @scalekit/react-sdk
+npm install @scalekit-sdk/react
 # or
-yarn add @scalekit/react-sdk
+yarn add @scalekit-sdk/react
 # or
-pnpm add @scalekit/react-sdk
+pnpm add @scalekit-sdk/react
 ```
 
 ## Quick Start
@@ -26,7 +26,7 @@ pnpm add @scalekit/react-sdk
 ### 1. Wrap your app with the provider
 
 ```tsx
-import { ScalekitAuthProvider } from '@scalekit/react-sdk';
+import { ScalekitAuthProvider } from '@scalekit-sdk/react';
 
 function App() {
   return (
@@ -49,7 +49,7 @@ function App() {
 ### 2. Use the auth hook in your components
 
 ```tsx
-import { useScalekitAuth } from '@scalekit/react-sdk';
+import { useScalekitAuth } from '@scalekit-sdk/react';
 
 function LoginButton() {
   const { isLoading, isAuthenticated, user, loginWithRedirect, logout } = useScalekitAuth();
@@ -74,7 +74,7 @@ function LoginButton() {
 ### 3. Handle the callback
 
 ```tsx
-import { ScalekitCallback } from '@scalekit/react-sdk';
+import { ScalekitCallback } from '@scalekit-sdk/react';
 import { useNavigate } from 'react-router-dom';
 
 function CallbackPage() {
@@ -195,7 +195,7 @@ Component to handle the OAuth callback.
 Higher-order component for protected routes.
 
 ```tsx
-import { withAuthenticationRequired } from '@scalekit/react-sdk';
+import { withAuthenticationRequired } from '@scalekit-sdk/react';
 
 const ProtectedDashboard = withAuthenticationRequired(Dashboard, {
   loadingComponent: <Spinner />,
@@ -252,7 +252,7 @@ import {
   CallbackError,         // Callback processing failed
   ConfigurationError,    // SDK misconfigured
   NotAuthenticatedError, // User not authenticated
-} from '@scalekit/react-sdk';
+} from '@scalekit-sdk/react';
 
 try {
   await loginWithRedirect();
@@ -289,7 +289,7 @@ Docusaurus is a static site generator that supports React components. Since auth
 #### 1. Install the SDK
 
 ```bash
-npm install @scalekit/react-sdk
+npm install @scalekit-sdk/react
 ```
 
 #### 2. Create an Auth Provider wrapper
@@ -299,7 +299,7 @@ Create `src/components/AuthProvider.tsx`:
 ```tsx
 import React from 'react';
 import BrowserOnly from '@docusaurus/BrowserOnly';
-import { ScalekitAuthProvider } from '@scalekit/react-sdk';
+import { ScalekitAuthProvider } from '@scalekit-sdk/react';
 
 interface AuthProviderProps {
   children: React.ReactNode;
@@ -355,7 +355,7 @@ import React from 'react';
 import BrowserOnly from '@docusaurus/BrowserOnly';
 
 function LoginButtonInner() {
-  const { useScalekitAuth } = require('@scalekit/react-sdk');
+  const { useScalekitAuth } = require('@scalekit-sdk/react');
   const { isLoading, isAuthenticated, user, loginWithRedirect, logout } = useScalekitAuth();
 
   if (isLoading) {
@@ -397,7 +397,7 @@ import BrowserOnly from '@docusaurus/BrowserOnly';
 import Layout from '@theme/Layout';
 
 function CallbackInner() {
-  const { ScalekitCallback } = require('@scalekit/react-sdk');
+  const { ScalekitCallback } = require('@scalekit-sdk/react');
 
   return (
     <ScalekitCallback
@@ -476,7 +476,7 @@ Astro supports React components through the `@astrojs/react` integration. Since 
 
 ```bash
 npx astro add react
-npm install @scalekit/react-sdk
+npm install @scalekit-sdk/react
 ```
 
 #### 2. Create the Auth Provider
@@ -485,7 +485,7 @@ Create `src/components/AuthProvider.tsx`:
 
 ```tsx
 import React, { type ReactNode } from 'react';
-import { ScalekitAuthProvider } from '@scalekit/react-sdk';
+import { ScalekitAuthProvider } from '@scalekit-sdk/react';
 
 interface AuthProviderProps {
   children: ReactNode;
@@ -520,7 +520,7 @@ Create `src/components/LoginButton.tsx`:
 
 ```tsx
 import React from 'react';
-import { useScalekitAuth } from '@scalekit/react-sdk';
+import { useScalekitAuth } from '@scalekit-sdk/react';
 
 export default function LoginButton() {
   const { isLoading, isAuthenticated, user, loginWithRedirect, logout } = useScalekitAuth();
@@ -571,7 +571,7 @@ Create `src/components/CallbackHandler.tsx`:
 
 ```tsx
 import React from 'react';
-import { ScalekitAuthProvider, ScalekitCallback } from '@scalekit/react-sdk';
+import { ScalekitAuthProvider, ScalekitCallback } from '@scalekit-sdk/react';
 
 interface Props {
   redirectUri: string;
@@ -672,7 +672,7 @@ Create `src/components/ProtectedContent.tsx`:
 
 ```tsx
 import React from 'react';
-import { ScalekitAuthProvider, useScalekitAuth } from '@scalekit/react-sdk';
+import { ScalekitAuthProvider, useScalekitAuth } from '@scalekit-sdk/react';
 
 interface Props {
   redirectUri: string;
