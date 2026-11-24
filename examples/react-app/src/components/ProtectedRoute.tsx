@@ -1,6 +1,6 @@
 import { ReactNode } from 'react';
 import { useScalekitAuth } from '@scalekit-sdk/react';
-import { Navigate, useLocation } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 
 interface ProtectedRouteProps {
   children: ReactNode;
